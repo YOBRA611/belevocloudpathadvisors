@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo/logo.jpeg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <title>Training - Belevo CloudPath Advisors</title>
+</head>
+<style>
+:root{
+    --primary:#0A2F87;
+    --secondary:#1456D9;
+    --navy:#061A4A;
+    --white:#FFFFFF;
+    --light:#F8FAFC;
+    --text:#1E293B;
+    --gray:#64748B;
+    --success:#16A34A;
+}
+/* TRAINING HERO */
+.training-hero{
+    padding:120px 5% 110px;
+    background:
+        linear-gradient(
+            90deg,
+            #1456D9 0%,
+            #1456d9ba 42%,
+            #1456d971 72%,
+            rgba(255, 255, 255, 0.08) 100%
+        ),
+        url("image/1baa07042c398f6d200917fab158833b.jpg") no-repeat center center/cover;
+}
+.training-hero-content{
+    max-width:850px;
+    color:#fff;
+}
+.training-hero-content span{
+    display:inline-block;
+    padding:9px 18px;
+    border-radius:40px;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.22);
+    margin-bottom:20px;
+    font-weight:600;
+}
+.training-hero-content h1{
+    font-size:clamp(38px,5vw,62px);
+    line-height:1.1;
+    margin-bottom:24px;
+}
+.training-hero-content p{
+    color:#E2E8F0;
+    font-size:16px;
+    line-height:1.8;
+}
+/* INTRO */
+.training-intro,
+.training-platforms,
+.training-formats{
+    padding:100px 5%;
+}
+.training-intro{
+    background:#fff;
+}
+.training-intro-container,
+.format-container{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
+}
+.training-intro-text h2,
+.format-content h2{
+    font-size:40px;
+    color:#061A4A;
+    line-height:1.2;
+    margin:18px 0;
+}
+.training-intro-text p,
+.format-content p{
+    color:#64748B;
+    line-height:1.9;
+    margin-bottom:16px;
+}
+.training-intro-card{
+    border-radius:22px;
+    padding:35px;
+}
+.training-intro-card h3{
+    color:#061A4A;
+    font-size:26px;
+    margin-bottom:22px;
+}
+.training-intro-card ul{
+    list-style:none;
+}
+.training-intro-card li{
+    padding:13px 0;
+    color:#334155;
+    border-bottom:1px solid #E2E8F0;
+}
+.training-intro-card li:last-child{
+    border-bottom:none;
+}
+.training-intro-card i{
+    color:#16A34A;
+    margin-right:10px;
+}
+/* PLATFORMS */
+.training-platforms{
+    background:#F8FAFC;
+}
+.training-header{
+    max-width:850px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+.training-header h2{
+    font-size:40px;
+    color:#061A4A;
+    line-height:1.2;
+    margin:18px 0;
+}
+.training-header p{
+    color:#64748B;
+    line-height:1.8;
+}
+.platform-grid{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+.platform-card{
+    background:#fff;
+    box-shadow:0 18px 40px rgba(120, 129, 148, 0.502);
+    border-radius:22px;
+    padding:34px;
+    transition:.3s ease;
+}
+.platform-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+}
+.platform-card i{
+    width:58px;
+    height:58px;
+    border-radius:16px;
+    background:#EAF1FF;
+    color:#0A2F87;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    margin-bottom:22px;
+}
+.platform-card h3{
+    color:#061A4A;
+    font-size:22px;
+    margin-bottom:12px;
+}
+.platform-card p{
+    color:#64748B;
+    line-height:1.75;
+}
+/* FORMATS */
+.training-formats{
+    background:#fff;
+}
+.format-list{
+    display:grid;
+    gap:18px;
+}
+.format-item{
+    display:flex;
+    gap:18px;
+    padding:24px;
+    border-radius:18px;
+    background:#ffffff;
+    box-shadow:0 18px 40px rgba(170, 173, 178, 0.502);
+}
+.format-item i{
+    width:50px;
+    height:50px;
+    min-width:50px;
+    border-radius:14px;
+    background:#EAF1FF;
+    color:#0A2F87;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+}
+.format-item h3{
+    color:#061A4A;
+    margin-bottom:6px;
+}
+.format-item p{
+    color:#64748B;
+    line-height:1.6;
+}
+/* CTA */
+.training-cta{
+    padding:95px 8%;
+    background:#ffffffa2;
+    color:var(--primary);
+    text-align:center;
+}
+.training-cta-content{
+    max-width:850px;
+    margin:auto;
+}
+.training-cta-content span{
+    display:inline-block;
+    margin-bottom:16px;
+    color:var(--primary);
+    font-weight:600;
+}
+.training-cta h2{
+    color: #061A4A;
+    font-size:40px;
+    line-height:1.2;
+    margin-bottom:18px;
+}
+.training-cta p{
+    color:#64748B;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    flex-wrap:wrap;
+}
+.training-cta-buttons a{
+    padding:15px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+}
+.training-cta-buttons a:first-child{
+    background:#fff;
+    color:#0A2F87;
+}
+.training-cta-buttons a:last-child{
+    color:var(--navy);
+    border:1px solid rgba(255,255,255,.35);
+}
+.cta-primary-btn,
+.cta-secondary-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:16px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s ease;
+}
+.cta-primary-btn{
+    background:#0A2F87;
+    color:#ffffff;
+}
+.cta-primary-btn:hover{
+    transform:translateY(-3px);
+}
+.cta-secondary-btn{
+    border:1px solid #0A2F87;
+    color:#0A2F87;
+}
+.cta-secondary-btn:hover{
+    background:rgba(255,255,255,0.12);
+    transform:translateY(-3px);
+}
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .training-intro-container,
+    .format-container{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .platform-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media(max-width:700px){
+    .training-hero{
+        padding:95px 5% 80px;
+    }
+    .training-intro,
+    .training-platforms,
+    .training-formats{
+        padding:75px 5%;
+    }
+    .training-intro-text h2,
+    .training-header h2,
+    .format-content h2,
+    .training-cta h2{
+        font-size:32px;
+    } 
+    .platform-grid{
+        grid-template-columns:1fr;
+    }
+    .format-item{
+        flex-direction:column;
+    }
+}
+</style>
+<body>
+    <!--WHATSAPP-->
+    <a href="https://wa.me/254141999740?text=Hello%20Belevo%20CloudPath%20Advisors!%20I%20would%20like%20to%20learn%20more%20about%20your%20nonprofit%20accounting,%20bookkeeping,%20tax%20advisory,%20and%20cloud%20accounting%20services."
+        class="whatsapp-float"
+        target="_blank">
+
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Book A Free Discovery Call</span>
+
+    </a>
+    <!--SCROLL BUTTON-->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+     <!--top-footer-->
+    <section class="top-footer">
+
+        <div class="top-footer-content">
+
+            <div class="top-contact">
+                <span>
+                    <i class="fa fa-phone"></i>
+                    +254141 999740
+                </span>
+
+            </div>
+
+            <div class="top-actions">
+                <a href="consultation.html" class="partner-btn">
+                    Book a Free Consultation
+                </a>
+                <div class="social-link-list">
+                    <a href="https://www.facebook.com/Belevoconsultants" class="social-link">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/belevo-consultants/" class="social-link">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="254141999740" class="social-link">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--HEADER-->
+    <header class="main-header">
+
+        <div class="logo-wrapper">
+            <img src="logo/logo-removebg-preview.png" class="logo">
+        </div>
+
+
+        <div class="menuToggle"></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">
+                        <span>Services</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="accounting_&_Financial_Reporting.html">Accounting & Financial Reporting</a></li>
+                        <li><a href="bookkeeping.html">Bookkeeping</a></li>
+                        <li><a href="tax_advisory.html">Tax Advisory</a></li>
+                        <li><a href="internal_audit.html">Internal Audit</a></li>
+                        <li><a href="cloud_accounting_training.html">Cloud Accounting Training</a></li>
+                        <li><a href="virtual_administrative_services.html">Virtual Administrative Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="who_we_serve.html">Who We Serve</a></li>
+                <li class="dropdown">
+                    <a href="resources.html" class="dropbtn">
+                        <span>Resources</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="NPO_challenges_we_solve.html">NPO Challenges We Solve</a></li>
+                        <li><a href="blog_&_resources.html">Blog & Resources</a></li>
+                        <li><a href="compliance_guides.html">Compliance Guides</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <!-- Donate Button -->
+                <li>
+                    <a href="book-training.html" class="donate-btn">Book Training</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- TRAINING HERO -->
+    <section class="training-hero">
+        <div class="training-hero-content" data-aos="fade-up">
+            <span>Cloud Accounting Training</span>
+            <h1>Practical accounting system training for nonprofit teams.</h1>
+            <p>
+                We help nonprofits, charities, NGOs, and PBOs confidently use cloud accounting
+                platforms for grant tracking, donor reporting, fund accounting, and compliance.
+            </p>
+        </div>
+    </section>
+    <!-- TRAINING INTRO -->
+    <section class="training-intro">
+        <div class="training-intro-container">
+
+            <div class="training-intro-text" data-aos="fade-down">
+                <span class="section-tag">TRAINING BUILT FOR NON PROFITS</span>
+                <h2>Not generic software training - nonprofit focused financial systems training.</h2>
+                <p>
+                    Many organisations invest in accounting software but struggle to configure it
+                    for restricted funds, grants, donors, projects, departments, and multi-currency
+                    reporting. Our training helps teams understand not just how to use the system,
+                    but how to use it correctly for nonprofit financial management.
+                </p>
+                <p>
+                    Each session is practical, hands-on, and tailored to your organisation’s current
+                    systems, team capacity, and reporting needs.
+                </p>
+            </div>
+
+            <div class="training-intro-card" data-aos="fade-up">
+                <h3>Training Outcomes</h3>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Better grant tracking</li>
+                    <li><i class="fa-solid fa-check"></i> Cleaner financial records</li>
+                    <li><i class="fa-solid fa-check"></i> Stronger donor reporting</li>
+                    <li><i class="fa-solid fa-check"></i> Confident finance teams</li>
+                    <li><i class="fa-solid fa-check"></i> Audit-ready workflows</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    <!-- PLATFORMS -->
+    <section class="training-platforms">
+        <div class="training-header" data-aos="fade-up">
+            <span class="section-tag">PLATFORMS WE TRAIN</span>
+            <h2>Cloud accounting systems your nonprofit can actually use well.</h2>
+            <p>
+                We train teams on leading accounting platforms with nonprofit-specific setup,
+                reporting, controls, and day-to-day usage.
+            </p>
+        </div>
+
+        <div class="platform-grid">
+
+            <div class="platform-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fa-solid fa-q"></i>
+                <h3>QuickBooks Online</h3>
+                <p>
+                    Training on nonprofit chart of accounts, classes, donors, grants,
+                    expenses, reports, and board-ready financial statements.
+                </p>
+            </div>
+
+            <div class="platform-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fa-solid fa-x"></i>
+                <h3>Xero</h3>
+                <p>
+                    Learn fund tracking, project codes, multi-currency reporting,
+                    bank reconciliation, and nonprofit reporting workflows.
+                </p>
+            </div>
+
+            <div class="platform-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fa-solid fa-cubes"></i>
+                <h3>Odoo</h3>
+                <p>
+                    Practical training for organisations using Odoo for accounting,
+                    operations, approvals, expense management, and reporting.
+                </p>
+            </div>
+
+            <div class="platform-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fa-solid fa-book-open"></i>
+                <h3>Zoho Books</h3>
+                <p>
+                    Training on automation, expense tracking, budgets, donor reporting,
+                    approvals, and nonprofit-friendly financial processes.
+                </p>
+            </div>
+
+            <div class="platform-card" data-aos="fade-up" data-aos-delay="500">
+                <i class="fa-solid fa-chart-line"></i>
+                <h3>Sage</h3>
+                <p>
+                    Learn accounts production, nonprofit reporting, reconciliations,
+                    financial controls, and structured reporting workflows.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- TRAINING FORMATS -->
+    <section class="training-formats">
+        <div class="format-container">
+
+            <div class="format-content" data-aos="fade-up">
+                <span class="section-tag">TRAINING FORMATS</span>
+                <h2>Flexible sessions designed around your team.</h2>
+                <p>
+                    Whether your organisation needs one-on-one support, full finance team training,
+                    or post-implementation guidance, we tailor each training format to match your
+                    team’s skill level and operational needs.
+                </p>
+            </div>
+
+            <div class="format-list" data-aos="zoom-in">
+
+                <div class="format-item">
+                    <i class="fa-solid fa-video"></i>
+                    <div>
+                        <h3>1-on-1 Virtual Sessions</h3>
+                        <p>Focused training through Zoom, Google Meet, or Microsoft Teams.</p>
+                    </div>
+                </div>
+
+                <div class="format-item">
+                    <i class="fa-solid fa-users"></i>
+                    <div>
+                        <h3>Group Finance Team Training</h3>
+                        <p>Structured sessions for finance officers, administrators, and program teams.</p>
+                    </div>
+                </div>
+
+                <div class="format-item">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <div>
+                        <h3>Custom Manuals & Guides</h3>
+                        <p>Simple reference materials tailored to your organisation’s workflows.</p>
+                    </div>
+                </div>
+
+                <div class="format-item">
+                    <i class="fa-solid fa-headset"></i>
+                    <div>
+                        <h3>Post-Training Support</h3>
+                        <p>Follow-up support to help your team apply what they learned confidently.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- TRAINING CTA -->
+    <section class="training-cta" data-aos="zoom-in">
+        <div class="training-cta-content">
+            <span>READY TO TRAIN YOUR TEAM?</span>
+            <h2>Book a cloud accounting training session for your organisation.</h2>
+            <p>
+                Let’s discuss your current system, training gaps, and the best format for your team.
+            </p>
+            <div class="cta-buttons">
+
+                <a href="#contact" class="cta-primary-btn">
+                    Book a Free Discovery Call
+                </a>
+
+                <a href="https://wa.me/254141999740" class="cta-secondary-btn">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Chat With Us
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!--footer-->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col footer-brand">
+
+                <div class="logo">
+                    <span><img src="logo/logo.jpeg" alt="Belevo CloudPath Advisors Logo"></span>
+                    <h3>Belevo CloudPath Advisors</h3>
+                </div>
+
+                <p>
+                    Your virtual nonprofit finance partner serving organisations across the US, UK, Kenya, and beyond.
+                </p>
+
+            </div>
+
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>CONTACT US</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    100% Virtual · Serving US, UK & Kenya
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    Tel: +254141 999 740
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    Email: info@belevocloudpathadvisors.com
+                </p>
+            </div>
+
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>OUR SERVICES</h4>
+
+                <ul>
+                    <li>
+                        <a href="accounting_&_Financial_Reporting.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Accounting & Financial Statements
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="bookkeeping.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Bookkeeping
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tax_advisory.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Tax Advisory
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="internal_audit.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Internal Audit
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>QUICK LINKS</h4>
+
+                <ul>
+                    <li>
+                        <a href="about.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="who_we_serve.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Who We Serve
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Book a Free Consultation
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+
+            <p>
+                © All rights reserved 2026. Crafted @
+                <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">
+                    Brydex Technologies
+                </a>
+            </p>
+
+            <div class="footer-links">
+                <a href="terms_&_conditions.html">Terms of Use</a>
+                <a href="privacy_policy.html">Privacy Policy</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Belevoconsultants"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/belevo-consultants/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="254141999740"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 90
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const loader = document.getElementById("loader");
+            const content = document.getElementById("page-content");
+            const topFooter = document.getElementById("top-footer");
+            const menuToggle = document.querySelector('.menuToggle');
+            const header = document.querySelector('.main-header');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            // LOADER + BLUR TRANSITION
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    loader.style.opacity = "0";
+
+                    setTimeout(() => {
+                        loader.style.display = "none";
+
+                        content.style.opacity = "1";
+                        content.style.filter = "blur(0)";
+                        content.style.transition = "all 0.6s ease";
+
+                        document.body.style.overflow = "auto";
+
+                        topFooter.classList.add("show");
+                    }, 500);
+                }, 1500);
+            });
+            // MOBILE MENU
+            menuToggle.addEventListener('click', e => {
+                e.stopPropagation();
+                header.classList.toggle('active');
+            });
+
+            // DROPDOWN (mobile)
+            dropdowns.forEach(dropdown => {
+                const icon = dropdown.querySelector('.dropbtn i');
+
+                icon.addEventListener('click', e => {
+                    if (window.innerWidth > 900) return;
+
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) d.classList.remove('active');
+                    });
+
+                    dropdown.classList.toggle('active');
+                });
+            });
+
+            // SCROLL BUTTON
+            let calcScrollValue = () => {
+                let scrollProgress = document.getElementById("progress");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round((pos * 100)/calcHeight);
+
+                if (pos > 100) {
+                    scrollProgress.style.display = "grid";
+                } else {
+                    scrollProgress.style.display = "none";
+                }
+
+                scrollProgress.onclick = () => {
+                    document.documentElement.scrollTop = 0;
+                };
+
+                scrollProgress.style.background =
+                    `conic-gradient(#1456D9 ${scrollValue}%, white ${scrollValue}%)`;
+            };
+
+            window.addEventListener("scroll", calcScrollValue);
+
+            //WHATSAPP BUTTON
+           const whatsapp = document.querySelector('.whatsapp-float');
+
+            let lastScrollY = window.scrollY;
+            let idleTimer;
+            let visible = false;
+
+            /* 🔹 SCROLL BEHAVIOR */
+            window.addEventListener('scroll', function () {
+                let currentScrollY = window.scrollY;
+
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // scrolling down
+                    showWhatsApp();
+                } else {
+                    // scrolling up
+                    hideWhatsApp();
+                }
+
+                lastScrollY = currentScrollY;
+
+                resetIdleTimer();
+            });
+
+            /* 🔹 IDLE BEHAVIOR (auto trigger) */
+            function resetIdleTimer() {
+                clearTimeout(idleTimer);
+
+                idleTimer = setTimeout(() => {
+                    showWhatsApp();
+
+                    setTimeout(() => {
+                        hideWhatsApp();
+                    }, 4000);
+
+                }, 5000); // shows after 5s of no activity
+            }
+
+            /* 🔹 SHOW / HIDE FUNCTIONS */
+            function showWhatsApp() {
+                if (!visible) {
+                    whatsapp.classList.add('show');
+                    visible = true;
+                }
+            }
+
+            function hideWhatsApp() {
+                whatsapp.classList.remove('show');
+                visible = false;
+            }
+
+            /* 🔹 INITIAL TRIGGER */
+            resetIdleTimer();
+
+            // HEADER SCROLL EFFECT
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 80) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

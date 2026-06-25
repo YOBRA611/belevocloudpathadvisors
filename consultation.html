@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo/logo.jpeg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <title>Consultation - Belevo CloudPath Advisors</title>
+</head>
+<style>
+:root{
+    --primary:#0A2F87;
+    --secondary:#1456D9;
+    --navy:#061A4A;
+    --white:#FFFFFF;
+    --light:#F8FAFC;
+    --text:#1E293B;
+    --gray:#64748B;
+    --success:#16A34A;
+}
+/* CONSULTATION HERO */
+.consultation-hero{
+    padding:120px 5% 110px;
+    background:
+        linear-gradient(
+            90deg,
+            #1456D9 0%,
+            #1456d9ba 42%,
+            #1456d971 72%,
+            rgba(255, 255, 255, 0.08) 100%
+        ),
+        url("image/74b56c964d47c047d296b659cb9b49c2.jpg") no-repeat center center/cover;
+}
+.consultation-hero-content{
+    max-width:850px;
+    color:#fff;
+}
+.consultation-hero-content span{
+    display:inline-block;
+    padding:9px 18px;
+    border-radius:40px;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.22);
+    margin-bottom:20px;
+    font-weight:600;
+    font-size: 14px;
+}
+.consultation-hero-content h1{
+    font-size:clamp(38px,5vw,50px);
+    line-height:1.1;
+    margin-bottom:24px;
+}
+.consultation-hero-content p{
+    color:#E2E8F0;
+    font-size:17px;
+    line-height:1.8;
+}
+/* INTRO */
+.consultation-intro,
+.consultation-expect,
+.consultation-form-section{
+    padding:100px 5%;
+}
+.consultation-intro{
+    background:#fff;
+}
+.consultation-intro-container{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
+}
+.consultation-intro-text h2,
+.consultation-form-text h2{
+    font-size:40px;
+    line-height:1.2;
+    color:#061A4A;
+    margin:18px 0;
+}
+.consultation-intro-text p,
+.consultation-form-text p{
+    color:#64748B;
+    line-height:1.9;
+    margin-bottom:16px;
+}
+.consultation-note{
+    background:#F8FAFC;
+    border-radius:22px;
+    padding:38px;
+}
+.consultation-note i{
+    width:65px;
+    height:65px;
+    border-radius:18px;
+    background:#EAF1FF;
+    color:#0A2F87;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    margin-bottom:24px;
+}
+.consultation-note h3{
+    color:#061A4A;
+    font-size:26px;
+    margin-bottom:12px;
+}
+.consultation-note p{
+    color:#64748B;
+    line-height:1.8;
+}
+/* EXPECT */
+.consultation-expect{
+    background:#F8FAFC;
+}
+.consultation-section-header{
+    max-width:850px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+.consultation-section-header h2{
+    font-size:42px;
+    color:#061A4A;
+    line-height:1.2;
+    margin:18px 0;
+}
+.consultation-section-header p{
+    color:#64748B;
+    line-height:1.8;
+}
+.expect-grid{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+.expect-card{
+    background:#fff;
+    box-shadow:0 18px 40px rgba(120, 129, 148, 0.502);
+    border-radius:22px;
+    padding:34px;
+    transition:.3s ease;
+}
+.expect-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+}
+.expect-card i{
+    width:58px;
+    height:58px;
+    border-radius:16px;
+    background:#EAF1FF;
+    color:#0A2F87;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    margin-bottom:22px;
+}
+.expect-card h3{
+    color:#061A4A;
+    font-size:18px;
+    margin-bottom:12px;
+}
+.expect-card p{
+    color:#64748B;
+    line-height:1.75;
+}
+/* FORM SECTION */
+.consultation-form-section{
+    background:#fff;
+}
+.consultation-form-container{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:70px;
+    align-items:start;
+}
+.consultation-contact{
+    margin-top:28px;
+}
+.consultation-contact p{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#334155;
+    margin-bottom:14px;
+}
+.consultation-contact i{
+    color:#0A2F87;
+    font-size:20px;
+}
+.consultation-form-card{
+    background:linear-gradient(135deg,#061A4A,#0A2F87);
+    padding:42px;
+    border-radius:10px;
+    color:#fff;
+    box-shadow:0 25px 60px rgba(6,26,74,.25);
+}
+.consultation-form-card h3{
+    font-size:30px;
+    margin-bottom:26px;
+}
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+.consultation-form-card input,
+.consultation-form-card select,
+.consultation-form-card textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:14px;
+    background:rgb(255, 255, 255);
+    border:1px solid rgba(255,255,255,.18);
+    color:#27272789;
+    outline:none;
+    border-radius:6px;
+    font-family:inherit;
+}
+.consultation-form-card input::placeholder,
+.consultation-form-card textarea::placeholder{
+    color:#27272789;
+}
+.consultation-form-card select{
+    color:#27272789;
+}
+.consultation-form-card option{
+    color:#061A4A;
+}
+.consultation-form-card textarea{
+    min-height:130px;
+    resize:none;
+}
+.consultation-form-card button{
+    width:100%;
+    padding:16px;
+    background:#ffffff;
+    color:#0A2F87;
+    border:none;
+    border-radius:6px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease;
+}
+.consultation-form-card button:hover{
+    transform:translateY(-3px);
+    background:#EAF1FF;
+}
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .consultation-intro-container,
+    .consultation-form-container{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .expect-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media(max-width:700px){
+    .consultation-hero{
+        padding:95px 6% 80px;
+    }
+
+    .consultation-intro,
+    .consultation-expect,
+    .consultation-form-section{
+        padding:75px 6%;
+    }
+
+    .consultation-intro-text h2,
+    .consultation-section-header h2,
+    .consultation-form-text h2{
+        font-size:32px;
+    }
+
+    .expect-grid,
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .consultation-form-card{
+        padding:30px 22px;
+        border-radius:16px;
+    }
+
+    .consultation-form-card h3{
+        font-size:25px;
+    }
+}
+</style>
+<body>
+    <!--WHATSAPP-->
+    <a href="https://wa.me/254141999740?text=Hello%20Belevo%20CloudPath%20Advisors!%20I%20would%20like%20to%20learn%20more%20about%20your%20nonprofit%20accounting,%20bookkeeping,%20tax%20advisory,%20and%20cloud%20accounting%20services."
+        class="whatsapp-float"
+        target="_blank">
+
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Book A Free Discovery Call</span>
+
+    </a>
+    <!--SCROLL BUTTON-->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+    <!--top-footer-->
+    <section class="top-footer">
+
+        <div class="top-footer-content">
+
+            <div class="top-contact">
+                <span>
+                    <i class="fa fa-phone"></i>
+                    +254141 999740
+                </span>
+
+            </div>
+
+            <div class="top-actions">
+                <a href="consultation.html" class="partner-btn">
+                    Book a Free Consultation
+                </a>
+                <div class="social-link-list">
+                    <a href="https://www.facebook.com/Belevoconsultants" class="social-link">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/belevo-consultants/" class="social-link">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="254141999740" class="social-link">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--HEADER-->
+    <header class="main-header">
+
+        <div class="logo-wrapper">
+            <img src="logo/logo-removebg-preview.png" class="logo">
+        </div>
+
+
+        <div class="menuToggle"></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">
+                        <span>Services</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="accounting_&_Financial_Reporting.html">Accounting & Financial Reporting</a></li>
+                        <li><a href="bookkeeping.html">Bookkeeping</a></li>
+                        <li><a href="tax_advisory.html">Tax Advisory</a></li>
+                        <li><a href="internal_audit.html">Internal Audit</a></li>
+                        <li><a href="cloud_accounting_training.html">Cloud Accounting Training</a></li>
+                        <li><a href="virtual_administrative_services.html">Virtual Administrative Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="who_we_serve.html">Who We Serve</a></li>
+                <li class="dropdown">
+                    <a href="resources.html" class="dropbtn">
+                        <span>Resources</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="NPO_challenges_we_solve.html">NPO Challenges We Solve</a></li>
+                        <li><a href="blog_&_resources.html">Blog & Resources</a></li>
+                        <li><a href="compliance_guides.html">Compliance Guides</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <!-- Donate Button -->
+                <li>
+                    <a href="book-training.html" class="donate-btn">Book Training</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- CONSULTATION HERO -->
+    <section class="consultation-hero">
+        <div class="consultation-hero-content" data-aos="fade-up">
+            <span>Free Discovery Call</span>
+
+            <h1>Let’s talk about your organisation’s financial needs.</h1>
+
+            <p>
+                Every mission-driven organisation has unique financial challenges.
+                This free consultation helps us understand your current systems,
+                compliance needs, reporting gaps, and how Belevo CloudPath Advisors
+                can support your mission.
+            </p>
+        </div>
+    </section>
+    <!-- CONSULTATION INTRO -->
+    <section class="consultation-intro">
+        <div class="consultation-intro-container">
+
+            <div class="consultation-intro-text" data-aos="zoom-in">
+                <span class="section-tag">WHY BOOK A CONSULTATION?</span>
+
+                <h2>Start with clarity before choosing a service.</h2>
+
+                <p>
+                    The purpose of the discovery call is not to rush you into a package.
+                    It is a guided conversation to understand your organisation’s current
+                    financial position, reporting responsibilities, donor expectations,
+                    and operational needs.
+                </p>
+
+                <p>
+                    Whether you need bookkeeping, accounting, audit readiness, donor
+                    reporting support, cloud accounting training, or virtual administration,
+                    we help you identify the most practical next step.
+                </p>
+            </div>
+
+            <div class="consultation-note" data-aos="fade-up">
+                <i class="fa-solid fa-video"></i>
+                <h3>Free 30-Minute Virtual Call</h3>
+                <p>
+                    Consultations are held online through Google Meet, Zoom, or Microsoft Teams.
+                    You may also request WhatsApp follow-up where needed.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- WHAT TO EXPECT -->
+    <section class="consultation-expect">
+        <div class="consultation-section-header" data-aos="fade-up">
+            <span class="section-tag">WHAT TO EXPECT</span>
+            <h2>A simple conversation designed around your organisation.</h2>
+            <p>
+                During the call, we focus on understanding your needs and recommending
+                the right type of support.
+            </p>
+        </div>
+
+        <div class="expect-grid">
+
+            <div class="expect-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fa-solid fa-comments"></i>
+                <h3>Understand Your Needs</h3>
+                <p>
+                    We learn about your organisation, current finance setup,
+                    reporting challenges, and immediate priorities.
+                </p>
+            </div>
+
+            <div class="expect-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <h3>Review Key Challenges</h3>
+                <p>
+                    We discuss grant tracking, compliance requirements, donor reporting,
+                    bookkeeping gaps, or audit preparation concerns.
+                </p>
+            </div>
+
+            <div class="expect-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h3>Recommend Next Steps</h3>
+                <p>
+                    We suggest the most suitable service, training, advisory support,
+                    or system improvement approach for your organisation.
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- CONSULTATION FORM -->
+    <section class="consultation-form-section" id="consultation-form-section">
+
+        <div class="consultation-form-container">
+
+            <div class="consultation-form-text" data-aos="fade-up">
+                <span class="section-tag">BOOK YOUR CALL</span>
+
+                <h2>Request your free discovery consultation.</h2>
+
+                <p>
+                    Share a few details about your organisation and the type of support
+                    you are looking for. Our team will review your request and respond
+                    within 24 business hours.
+                </p>
+
+                <div class="consultation-contact">
+                    <p>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        WhatsApp: +2541 41 999 740
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        Email: info@belevocloudpathadvisors.com
+                    </p>
+                </div>
+            </div>
+
+            <div class="consultation-form-card" data-aos="fade-down">
+
+                <h3>Consultation Request Form</h3>
+
+                <form id="consultation-form">
+
+                    <div class="form-row">
+                        <input type="text" name="organization_name" placeholder="Organization Name" required>
+                        <input type="text" name="contact_person" placeholder="Contact Person" required>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="email" name="user_email" placeholder="Email Address" required>
+                        <input type="tel" name="phone" placeholder="Phone / WhatsApp Number" required>
+                    </div>
+
+                    <div class="form-row">
+                        <select name="organization_type" required>
+                            <option value="">Organization Type</option>
+                            <option>Nonprofit</option>
+                            <option>Charity</option>
+                            <option>NGO</option>
+                            <option>PBO</option>
+                            <option>Foundation</option>
+                            <option>Faith-Based Organization</option>
+                            <option>International NGO</option>
+                            <option>Other</option>
+                        </select>
+
+                        <select name="service_interest" required>
+                            <option value="">Primary Area of Interest</option>
+                            <option>Accounting & Financial Statements</option>
+                            <option>Bookkeeping</option>
+                            <option>Tax Advisory</option>
+                            <option>Internal Audit</option>
+                            <option>Cloud Accounting Training</option>
+                            <option>Virtual Admin Services</option>
+                            <option>General Consultation</option>
+                        </select>
+                    </div>
+
+                    <textarea name="message" placeholder="Tell us briefly about your current financial challenge or support need"></textarea>
+
+                    <button type="submit">Submit Consultation Request</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!--footer-->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col footer-brand">
+
+                <div class="logo">
+                    <span><img src="logo/logo.jpeg" alt="Belevo CloudPath Advisors Logo"></span>
+                    <h3>Belevo CloudPath Advisors</h3>
+                </div>
+
+                <p>
+                    Your virtual nonprofit finance partner serving organisations across the US, UK, Kenya, and beyond.
+                </p>
+
+            </div>
+
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>CONTACT US</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    100% Virtual · Serving US, UK & Kenya
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    Tel: +254141 999 740
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    Email: info@belevocloudpathadvisors.com
+                </p>
+            </div>
+
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>OUR SERVICES</h4>
+
+                <ul>
+                    <li>
+                        <a href="accounting_&_Financial_Reporting.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Accounting & Financial Statements
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="bookkeeping.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Bookkeeping
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tax_advisory.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Tax Advisory
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="internal_audit.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Internal Audit
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>QUICK LINKS</h4>
+
+                <ul>
+                    <li>
+                        <a href="about.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="who_we_serve.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Who We Serve
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Book a Free Consultation
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+
+            <p>
+                © All rights reserved 2026. Crafted @
+                <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">
+                    Brydex Technologies
+                </a>
+            </p>
+
+            <div class="footer-links">
+                <a href="terms_&_conditions.html">Terms of Use</a>
+                <a href="privacy_policy.html">Privacy Policy</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Belevoconsultants"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/belevo-consultants/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="254141999740"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 90
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const loader = document.getElementById("loader");
+            const content = document.getElementById("page-content");
+            const topFooter = document.getElementById("top-footer");
+            const menuToggle = document.querySelector('.menuToggle');
+            const header = document.querySelector('.main-header');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            // LOADER + BLUR TRANSITION
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    loader.style.opacity = "0";
+
+                    setTimeout(() => {
+                        loader.style.display = "none";
+
+                        content.style.opacity = "1";
+                        content.style.filter = "blur(0)";
+                        content.style.transition = "all 0.6s ease";
+
+                        document.body.style.overflow = "auto";
+
+                        topFooter.classList.add("show");
+                    }, 500);
+                }, 1500);
+            });
+            // MOBILE MENU
+            menuToggle.addEventListener('click', e => {
+                e.stopPropagation();
+                header.classList.toggle('active');
+            });
+
+            // DROPDOWN (mobile)
+            dropdowns.forEach(dropdown => {
+                const icon = dropdown.querySelector('.dropbtn i');
+
+                icon.addEventListener('click', e => {
+                    if (window.innerWidth > 900) return;
+
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) d.classList.remove('active');
+                    });
+
+                    dropdown.classList.toggle('active');
+                });
+            });
+
+            // SCROLL BUTTON
+            let calcScrollValue = () => {
+                let scrollProgress = document.getElementById("progress");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round((pos * 100)/calcHeight);
+
+                if (pos > 100) {
+                    scrollProgress.style.display = "grid";
+                } else {
+                    scrollProgress.style.display = "none";
+                }
+
+                scrollProgress.onclick = () => {
+                    document.documentElement.scrollTop = 0;
+                };
+
+                scrollProgress.style.background =
+                    `conic-gradient(#1456D9 ${scrollValue}%, white ${scrollValue}%)`;
+            };
+
+            window.addEventListener("scroll", calcScrollValue);
+
+            //WHATSAPP BUTTON
+           const whatsapp = document.querySelector('.whatsapp-float');
+
+            let lastScrollY = window.scrollY;
+            let idleTimer;
+            let visible = false;
+
+            /* 🔹 SCROLL BEHAVIOR */
+            window.addEventListener('scroll', function () {
+                let currentScrollY = window.scrollY;
+
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // scrolling down
+                    showWhatsApp();
+                } else {
+                    // scrolling up
+                    hideWhatsApp();
+                }
+
+                lastScrollY = currentScrollY;
+
+                resetIdleTimer();
+            });
+
+            /* 🔹 IDLE BEHAVIOR (auto trigger) */
+            function resetIdleTimer() {
+                clearTimeout(idleTimer);
+
+                idleTimer = setTimeout(() => {
+                    showWhatsApp();
+
+                    setTimeout(() => {
+                        hideWhatsApp();
+                    }, 4000);
+
+                }, 5000); // shows after 5s of no activity
+            }
+
+            /* 🔹 SHOW / HIDE FUNCTIONS */
+            function showWhatsApp() {
+                if (!visible) {
+                    whatsapp.classList.add('show');
+                    visible = true;
+                }
+            }
+
+            function hideWhatsApp() {
+                whatsapp.classList.remove('show');
+                visible = false;
+            }
+
+            /* 🔹 INITIAL TRIGGER */
+            resetIdleTimer();
+
+            // HEADER SCROLL EFFECT
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 80) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

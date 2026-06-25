@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo/logo.jpeg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <title>Virtual Administrative Services - Belevo CloudPath Advisors</title>
+</head>
+<style>
+/* VIRTUAL ADMINISTRATIVE SERVICES HERO */
+.virtual-admin-hero{
+    padding:120px 5% 110px;
+    background:
+        linear-gradient(
+            90deg,
+            #1456D9 0%,
+            #1456d9ba 42%,
+            #1456d971 72%,
+            rgba(255, 255, 255, 0.08) 100%
+        ),
+        url("image/96dc5750ad1c4c28a15452493f24aa5a.jpg") no-repeat center center/cover;
+}
+.service-detail-hero-content{
+    max-width:850px;
+    color:#fff;
+}
+
+.service-detail-hero-content span{
+    display:inline-block;
+    padding:9px 18px;
+    border-radius:40px;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.22);
+    margin-bottom:20px;
+    font-weight:600;
+}
+
+.service-detail-hero-content h1{
+    font-size:clamp(38px,5vw,50px);
+    line-height:1.1;
+    margin-bottom:24px;
+}
+
+.service-detail-hero-content p{
+    color:#E2E8F0;
+    font-size:16px;
+    line-height:1.8;
+}
+/* INTRO */
+.service-detail-intro,
+.service-support-section,
+.service-why-section{
+    padding:100px 8%;
+}
+
+.service-detail-intro,
+.service-why-section{
+    background:#fff;
+}
+
+.service-support-section{
+    background:#F8FAFC;
+}
+
+.service-detail-container,
+.service-why-container{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.service-detail-text h2,
+.service-why-text h2{
+    font-size:42px;
+    color:#061A4A;
+    line-height:1.2;
+    margin:18px 0;
+}
+
+.service-detail-text p,
+.service-why-text p{
+    color:#64748B;
+    line-height:1.9;
+    margin-bottom:16px;
+}
+
+.service-detail-image img,
+.service-why-image img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    border-radius:5px;
+}
+
+/* SUPPORT */
+.service-section-header{
+    max-width:850px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+
+.service-section-header h2{
+    font-size:42px;
+    color:#061A4A;
+    line-height:1.2;
+    margin:18px 0;
+}
+
+.service-section-header p{
+    color:#64748B;
+    line-height:1.8;
+}
+
+.support-grid{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.support-card{
+    background:#fff;
+    border:1px solid #E2E8F0;
+    border-radius:20px;
+    padding:32px;
+    transition:.3s ease;
+}
+
+.support-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 18px 40px rgba(15,23,42,.08);
+}
+
+.support-card i{
+    width:58px;
+    height:58px;
+    border-radius:16px;
+    background:#EAF1FF;
+    color:#0A2F87;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    margin-bottom:22px;
+}
+
+.support-card h3{
+    color:#061A4A;
+    font-size:21px;
+    margin-bottom:12px;
+}
+
+.support-card p{
+    color:#64748B;
+    line-height:1.75;
+}
+
+/* WHY */
+.why-list{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.why-list div{
+    background:#F8FAFC;
+    border:1px solid #E2E8F0;
+    padding:16px;
+    border-radius:12px;
+    color:#334155;
+}
+
+.why-list i{
+    color:#16A34A;
+    margin-right:8px;
+}
+
+/* CTA */
+.service-detail-cta{
+    padding:95px 8%;
+    background: #fff;;
+    text-align:center;
+    color:black;
+}
+.service-detail-cta-content{
+    max-width:850px;
+    margin:auto;
+}
+
+.service-detail-cta-content span{
+    color: #0A2F87;
+    font-weight:600;
+}
+
+.service-detail-cta h2{
+    font-size:44px;
+    line-height:1.2;
+    margin:18px 0;
+    color: #061A4A;
+}
+
+.service-detail-cta p{
+    color: #64748B;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.service-detail-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.service-detail-buttons a{
+    padding:15px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.service-detail-buttons a:first-child{
+    background:#0A2F87;
+    color:#ffffff;
+}
+
+.service-detail-buttons a:last-child{
+    color:#0A2F87;
+    border: 1px solid #0A2F87;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .service-detail-container,
+    .service-why-container{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .support-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .service-detail-image img,
+    .service-why-image img{
+        height:420px;
+    }
+}
+@media(max-width:700px){
+    .service-detail-hero{
+        padding:95px 6% 80px;
+    }
+
+    .service-detail-intro,
+    .service-support-section,
+    .service-why-section{
+        padding:75px 6%;
+    }
+
+    .service-detail-text h2,
+    .service-section-header h2,
+    .service-why-text h2,
+    .service-detail-cta h2{
+        font-size:32px;
+    }
+
+    .support-grid,
+    .why-list{
+        grid-template-columns:1fr;
+    }
+
+    .service-detail-image img,
+    .service-why-image img{
+        height:320px;
+    }
+
+    .service-detail-cta{
+        padding:75px 6%;
+    }
+
+    .service-detail-buttons{
+        flex-direction:column;
+    }
+
+    .service-detail-buttons a{
+        width:100%;
+    }
+}
+</style>
+<body>
+    <!--WHATSAPP-->
+    <a href="https://wa.me/254141999740?text=Hello%20Belevo%20CloudPath%20Advisors!%20I%20would%20like%20to%20learn%20more%20about%20your%20nonprofit%20accounting,%20bookkeeping,%20tax%20advisory,%20and%20cloud%20accounting%20services."
+        class="whatsapp-float"
+        target="_blank">
+
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Book A Free Discovery Call</span>
+
+    </a>
+    <!--SCROLL BUTTON-->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+    <!--top-footer-->
+    <section class="top-footer">
+
+        <div class="top-footer-content">
+
+            <div class="top-contact">
+                <span>
+                    <i class="fa fa-phone"></i>
+                    +254141 999740
+                </span>
+
+            </div>
+
+            <div class="top-actions">
+                <a href="consultation.html" class="partner-btn">
+                    Book a Free Consultation
+                </a>
+                <div class="social-link-list">
+                    <a href="https://www.facebook.com/Belevoconsultants" class="social-link">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/belevo-consultants/" class="social-link">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="254141999740" class="social-link">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--HEADER-->
+    <header class="main-header">
+
+        <div class="logo-wrapper">
+            <img src="logo/logo-removebg-preview.png" class="logo">
+        </div>
+
+
+        <div class="menuToggle"></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">
+                        <span>Services</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="accounting_&_Financial_Reporting.html">Accounting & Financial Reporting</a></li>
+                        <li><a href="bookkeeping.html">Bookkeeping</a></li>
+                        <li><a href="tax_advisory.html">Tax Advisory</a></li>
+                        <li><a href="internal_audit.html">Internal Audit</a></li>
+                        <li><a href="cloud_accounting_training.html">Cloud Accounting Training</a></li>
+                        <li><a href="virtual_administrative_services.html">Virtual Administrative Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="who_we_serve.html">Who We Serve</a></li>
+                <li class="dropdown">
+                    <a href="resources.html" class="dropbtn">
+                        <span>Resources</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="NPO_challenges_we_solve.html">NPO Challenges We Solve</a></li>
+                        <li><a href="blog_&_resources.html">Blog & Resources</a></li>
+                        <li><a href="compliance_guides.html">Compliance Guides</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <!-- Donate Button -->
+                <li>
+                    <a href="book-training.html" class="donate-btn">Book Training</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- VIRTUAL ADMINISTRATIVE SERVICES HERO -->
+    <section class="service-detail-hero virtual-admin-hero">
+        <div class="service-detail-hero-content" data-aos="fade-up">
+            <span>Virtual Administrative Services</span>
+
+            <h1>Remote administrative support for mission-driven organisations.</h1>
+
+            <p>
+                We help nonprofits, charities, NGOs, PBOs, foundations, and INGOs manage
+                administrative tasks, documentation, schedules, donor communication, and
+                operational coordination through reliable virtual support.
+            </p>
+        </div>
+    </section>
+    <!-- SERVICE INTRO -->
+    <section class="service-detail-intro">
+        <div class="service-detail-container">
+
+            <div class="service-detail-text" data-aos="fade-down">
+                <span class="section-tag">SERVICE OVERVIEW</span>
+
+                <h2>Helping your team stay organised, responsive, and focused.</h2>
+
+                <p>
+                    Nonprofit teams often carry heavy administrative workloads alongside
+                    programme delivery, donor reporting, compliance, and stakeholder management.
+                    Without proper support, important tasks can easily become delayed or scattered.
+                </p>
+
+                <p>
+                    Belevo CloudPath Advisors provides virtual administrative services that help
+                    your organisation improve coordination, manage documents, support meetings,
+                    track deadlines, and maintain professional communication.
+                </p>
+            </div>
+
+            <div class="service-detail-image" data-aos="zoom-in">
+                <img src="image/5e8700424201eb225c9a7dea4c3ec7f4.jpg" alt="Virtual administrative services for nonprofits">
+            </div>
+
+        </div>
+    </section>
+    <!-- WHAT WE SUPPORT -->
+    <section class="service-support-section">
+
+        <div class="service-section-header" data-aos="fade-up">
+            <span class="section-tag">WHAT WE SUPPORT</span>
+            <h2>Administrative support designed around nonprofit operations.</h2>
+            <p>
+                We help your organisation manage daily operations more efficiently while
+                maintaining professionalism and accountability.
+            </p>
+        </div>
+
+        <div class="support-grid">
+
+            <div class="support-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <h3>Email & Calendar Management</h3>
+                <p>
+                    Support with inbox organisation, meeting scheduling, reminders,
+                    follow-ups, and calendar coordination.
+                </p>
+            </div>
+
+            <div class="support-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fa-solid fa-users"></i>
+                <h3>Board Meeting Support</h3>
+                <p>
+                    Assistance with meeting logistics, agenda preparation, minutes,
+                    action tracking, and board communication.
+                </p>
+            </div>
+
+            <div class="support-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <h3>Donor Correspondence</h3>
+                <p>
+                    Support with donor emails, acknowledgement letters, follow-ups,
+                    and stakeholder communication.
+                </p>
+            </div>
+
+            <div class="support-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fa-solid fa-calendar-check"></i>
+                <h3>Grant Calendar Tracking</h3>
+                <p>
+                    Help tracking reporting deadlines, grant milestones, renewal dates,
+                    submissions, and compliance reminders.
+                </p>
+            </div>
+
+            <div class="support-card" data-aos="fade-up" data-aos-delay="500">
+                <i class="fa-solid fa-folder-tree"></i>
+                <h3>Document Management</h3>
+                <p>
+                    Organised filing systems for finance records, donor documents,
+                    board files, policies, and operational records.
+                </p>
+            </div>
+
+            <div class="support-card" data-aos="fade-up" data-aos-delay="600">
+                <i class="fa-solid fa-headset"></i>
+                <h3>Virtual Office Support</h3>
+                <p>
+                    Remote support for enquiries, coordination, stakeholder communication,
+                    and routine administrative tasks.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- WHY IT MATTERS -->
+    <section class="service-why-section">
+
+        <div class="service-why-container">
+
+            <div class="service-why-image" data-aos="fade-up">
+                <img src="image/96dc5750ad1c4c28a15452493f24aa5a.jpg" alt="Remote administrative support">
+            </div>
+
+            <div class="service-why-text" data-aos="fade-down">
+                <span class="section-tag">WHY IT MATTERS</span>
+
+                <h2>Strong administration keeps your mission moving.</h2>
+
+                <p>
+                    Effective administration helps your organisation stay responsive,
+                    organised, and prepared. With the right virtual support, your team can
+                    spend less time chasing documents, meetings, and deadlines — and more
+                    time serving communities.
+                </p>
+
+                <div class="why-list">
+                    <div><i class="fa-solid fa-check"></i> Improve daily coordination</div>
+                    <div><i class="fa-solid fa-check"></i> Keep donor communication professional</div>
+                    <div><i class="fa-solid fa-check"></i> Track important deadlines</div>
+                    <div><i class="fa-solid fa-check"></i> Organise documents and records</div>
+                    <div><i class="fa-solid fa-check"></i> Support board and team meetings</div>
+                    <div><i class="fa-solid fa-check"></i> Reduce administrative pressure</div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- SERVICE CTA -->
+    <section class="service-detail-cta" data-aos="zoom-in">
+        <div class="service-detail-cta-content">
+            <span>NEED RELIABLE VIRTUAL ADMIN SUPPORT ?</span>
+
+            <h2>Let’s help your organisation stay organised and focused.</h2>
+
+            <p>
+                Book a free consultation and let’s discuss your administrative workload,
+                communication needs, document management, and operational support requirements.
+            </p>
+
+            <div class="service-detail-buttons">
+                <a href="consultation.html">Book Free Consultation</a>
+                <a href="services.html">View All Services</a>
+            </div>
+        </div>
+    </section>
+    <!--footer-->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col footer-brand">
+
+                <div class="logo">
+                    <span><img src="logo/logo.jpeg" alt="Belevo CloudPath Advisors Logo"></span>
+                    <h3>Belevo CloudPath Advisors</h3>
+                </div>
+
+                <p>
+                    Your virtual nonprofit finance partner serving organisations across the US, UK, Kenya, and beyond.
+                </p>
+
+            </div>
+
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>CONTACT US</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    100% Virtual · Serving US, UK & Kenya
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    Tel: +254141 999 740
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    Email: info@belevocloudpathadvisors.com
+                </p>
+            </div>
+
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>OUR SERVICES</h4>
+
+                <ul>
+                    <li>
+                        <a href="accounting_&_Financial_Reporting.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Accounting & Financial Statements
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="bookkeeping.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Bookkeeping
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tax_advisory.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Tax Advisory
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="internal_audit.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Internal Audit
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>QUICK LINKS</h4>
+
+                <ul>
+                    <li>
+                        <a href="about.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="who_we_serve.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Who We Serve
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Book a Free Consultation
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+
+            <p>
+                © All rights reserved 2026. Crafted @
+                <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">
+                    Brydex Technologies
+                </a>
+            </p>
+
+            <div class="footer-links">
+                <a href="terms_&_conditions.html">Terms of Use</a>
+                <a href="privacy_policy.html">Privacy Policy</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Belevoconsultants"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/belevo-consultants/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="254141999740"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 90
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const loader = document.getElementById("loader");
+            const content = document.getElementById("page-content");
+            const topFooter = document.getElementById("top-footer");
+            const menuToggle = document.querySelector('.menuToggle');
+            const header = document.querySelector('.main-header');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            // LOADER + BLUR TRANSITION
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    loader.style.opacity = "0";
+
+                    setTimeout(() => {
+                        loader.style.display = "none";
+
+                        content.style.opacity = "1";
+                        content.style.filter = "blur(0)";
+                        content.style.transition = "all 0.6s ease";
+
+                        document.body.style.overflow = "auto";
+
+                        topFooter.classList.add("show");
+                    }, 500);
+                }, 1500);
+            });
+            // MOBILE MENU
+            menuToggle.addEventListener('click', e => {
+                e.stopPropagation();
+                header.classList.toggle('active');
+            });
+
+            // DROPDOWN (mobile)
+            dropdowns.forEach(dropdown => {
+                const icon = dropdown.querySelector('.dropbtn i');
+
+                icon.addEventListener('click', e => {
+                    if (window.innerWidth > 900) return;
+
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) d.classList.remove('active');
+                    });
+
+                    dropdown.classList.toggle('active');
+                });
+            });
+
+            // SCROLL BUTTON
+            let calcScrollValue = () => {
+                let scrollProgress = document.getElementById("progress");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round((pos * 100)/calcHeight);
+
+                if (pos > 100) {
+                    scrollProgress.style.display = "grid";
+                } else {
+                    scrollProgress.style.display = "none";
+                }
+
+                scrollProgress.onclick = () => {
+                    document.documentElement.scrollTop = 0;
+                };
+
+                scrollProgress.style.background =
+                    `conic-gradient(#1456D9 ${scrollValue}%, white ${scrollValue}%)`;
+            };
+
+            window.addEventListener("scroll", calcScrollValue);
+
+            //WHATSAPP BUTTON
+           const whatsapp = document.querySelector('.whatsapp-float');
+
+            let lastScrollY = window.scrollY;
+            let idleTimer;
+            let visible = false;
+
+            /* 🔹 SCROLL BEHAVIOR */
+            window.addEventListener('scroll', function () {
+                let currentScrollY = window.scrollY;
+
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // scrolling down
+                    showWhatsApp();
+                } else {
+                    // scrolling up
+                    hideWhatsApp();
+                }
+
+                lastScrollY = currentScrollY;
+
+                resetIdleTimer();
+            });
+
+            /* 🔹 IDLE BEHAVIOR (auto trigger) */
+            function resetIdleTimer() {
+                clearTimeout(idleTimer);
+
+                idleTimer = setTimeout(() => {
+                    showWhatsApp();
+
+                    setTimeout(() => {
+                        hideWhatsApp();
+                    }, 4000);
+
+                }, 5000); // shows after 5s of no activity
+            }
+
+            /* 🔹 SHOW / HIDE FUNCTIONS */
+            function showWhatsApp() {
+                if (!visible) {
+                    whatsapp.classList.add('show');
+                    visible = true;
+                }
+            }
+
+            function hideWhatsApp() {
+                whatsapp.classList.remove('show');
+                visible = false;
+            }
+
+            /* 🔹 INITIAL TRIGGER */
+            resetIdleTimer();
+
+            // HEADER SCROLL EFFECT
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 80) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

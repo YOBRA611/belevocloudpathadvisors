@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo/logo.jpeg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <title>Services - Belevo CloudPath Advisors</title>
+</head>
+<style>
+/* SERVICES HERO */
+.services-hero{
+    padding:120px 5% 110px;
+    background:
+        linear-gradient(
+            90deg,
+            #1456D9 0%,
+            #1456d9ba 42%,
+            #1456d971 72%,
+            rgba(255, 255, 255, 0.08) 100%
+        ),
+        url("image/7e6f723ef44d157118ddf889f268c558.jpg") no-repeat center center/cover;
+}
+.services-hero-content{
+    max-width:850px;
+    color:#fff;
+}
+.services-hero-content span{
+    display:inline-block;
+    padding:9px 18px;
+    border-radius:40px;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.22);
+    margin-bottom:20px;
+    font-weight:600;
+    font-size: 14px;
+}
+.services-hero-content h1{
+    font-size:clamp(38px,5vw,50px);
+    line-height:1.1;
+    margin-bottom:24px;
+}
+.services-hero-content p{
+    color:#E2E8F0;
+    font-size:16px;
+    line-height:1.8;
+}
+/* INTRO */
+.services-intro{
+    padding:100px 5%;
+    background:#fff;
+}
+.services-intro-container{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:70px;
+    align-items:center;
+}
+.services-intro-text h2{
+    font-size:40px;
+    color:#061A4A;
+    line-height:1.2;
+    margin:18px 0;
+}
+.services-intro-text p{
+    color:#64748B;
+    line-height:1.9;
+    margin-bottom:16px;
+}
+.services-intro-card{
+    background:#F8FAFC;
+    border-radius:22px;
+    padding:38px;
+}
+.services-intro-card i{
+    width:65px;
+    height:65px;
+    border-radius:18px;
+    background:#EAF1FF;
+    color:#0A2F87;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    margin-bottom:24px;
+}
+.services-intro-card h3{
+    color:#061A4A;
+    font-size:26px;
+    margin-bottom:12px;
+}
+.services-intro-card p{
+    color:#64748B;
+    line-height:1.8;
+}
+/* SERVICES LIST */
+.services-list-section{
+    padding:100px 5%;
+    background:#F8FAFC;
+}
+.services-page-header{
+    max-width:850px;
+    margin:0 auto 60px;
+    text-align:center;
+}
+.services-page-header h2{
+    font-size:40px;
+    color:#061A4A;
+    line-height:1.2;
+    margin:18px 0;
+}
+.services-page-header p{
+    color:#64748B;
+    line-height:1.8;
+}
+.services-list-grid{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+.service-page-card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    transition:.3s ease;
+    box-shadow:0 14px 35px rgba(15,23,42,.06);
+}
+.service-page-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 22px 50px rgba(15,23,42,.12);
+}
+.service-page-img{
+    height:215px;
+    overflow:hidden;
+}
+.service-page-img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s ease;
+}
+.service-page-card:hover .service-page-img img{
+    transform:scale(1.06);
+}
+.service-page-content{
+    padding:34px 28px 30px;
+}
+.service-page-content i{
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    background:#0A2F87;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+    margin-top:-62px;
+    margin-bottom:24px;
+    position:relative;
+    z-index:2;
+    box-shadow:0 10px 25px rgba(6,26,74,.25);
+}
+.service-page-content h3{
+    color:#061A4A;
+    font-size:21px;
+    margin-bottom:12px;
+}
+.service-page-content p{
+    color:#64748B;
+    font-size:15px;
+    line-height:1.75;
+    margin-bottom:24px;
+}
+.service-page-content a{
+    display:inline-block;
+    padding:11px 22px;
+    background:#0A2F87;
+    color:#fff;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+}
+/* CTA */
+.services-cta{
+    padding:95px 8%;
+    background: #fff;;
+    text-align:center;
+    color:black;
+}
+.services-cta-content{
+    max-width:850px;
+    margin:auto;
+}
+
+.services-cta-content span{
+    color:#0A2F87;
+    font-weight:600;
+}
+
+.services-cta h2{
+    font-size:40px;
+    line-height:1.2;
+    margin:18px 0;
+    color: #061A4A;
+}
+
+.services-cta p{
+    color:#64748B;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:16px;
+    flex-wrap:wrap;
+}
+.cta-primary-btn,
+.cta-secondary-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:16px 28px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s ease;
+}
+.cta-primary-btn{
+    background:#0A2F87;
+    color:#ffffff;
+}
+.cta-primary-btn:hover{
+    transform:translateY(-3px);
+}
+.cta-secondary-btn{
+    border:1px solid #0A2F87;
+    color:#0A2F87;
+}
+.cta-secondary-btn:hover{
+    background:rgba(255,255,255,0.12);
+    transform:translateY(-3px);
+}
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .services-intro-container{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .services-list-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media(max-width:700px){
+    .services-hero{
+        padding:95px 6% 80px;
+    }
+
+    .services-intro,
+    .services-list-section{
+        padding:75px 6%;
+    }
+
+    .services-intro-text h2,
+    .services-page-header h2,
+    .services-cta h2{
+        font-size:32px;
+    }
+
+    .services-list-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services-cta{
+        padding:75px 6%;
+    }
+
+    .cta-buttons{
+        flex-direction:column;
+    }
+
+    .services-cta-buttons a{
+        width:100%;
+    }
+}
+</style>
+<body>
+    <!--WHATSAPP-->
+    <a href="https://wa.me/254141999740?text=Hello%20Belevo%20CloudPath%20Advisors!%20I%20would%20like%20to%20learn%20more%20about%20your%20nonprofit%20accounting,%20bookkeeping,%20tax%20advisory,%20and%20cloud%20accounting%20services."
+        class="whatsapp-float"
+        target="_blank">
+
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Book A Free Discovery Call</span>
+
+    </a>
+    <!--SCROLL BUTTON-->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+    <!--top-footer-->
+    <section class="top-footer">
+
+        <div class="top-footer-content">
+
+            <div class="top-contact">
+                <span>
+                    <i class="fa fa-phone"></i>
+                    +254141 999740
+                </span>
+
+            </div>
+
+            <div class="top-actions">
+                <a href="consultation.html" class="partner-btn">
+                    Book a Free Consultation
+                </a>
+                <div class="social-link-list">
+                    <a href="https://www.facebook.com/Belevoconsultants" class="social-link">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/belevo-consultants/" class="social-link">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="254141999740" class="social-link">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--HEADER-->
+    <header class="main-header">
+
+        <div class="logo-wrapper">
+            <img src="logo/logo-removebg-preview.png" class="logo">
+        </div>
+
+
+        <div class="menuToggle"></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">
+                        <span>Services</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="accounting_&_Financial_Reporting.html">Accounting & Financial Reporting</a></li>
+                        <li><a href="bookkeeping.html">Bookkeeping</a></li>
+                        <li><a href="tax_advisory.html">Tax Advisory</a></li>
+                        <li><a href="internal_audit.html">Internal Audit</a></li>
+                        <li><a href="cloud_accounting_training.html">Cloud Accounting Training</a></li>
+                        <li><a href="virtual_administrative_services.html">Virtual Administrative Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="who_we_serve.html">Who We Serve</a></li>
+                <li class="dropdown">
+                    <a href="resources.html" class="dropbtn">
+                        <span>Resources</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="NPO_challenges_we_solve.html">NPO Challenges We Solve</a></li>
+                        <li><a href="blog_&_resources.html">Blog & Resources</a></li>
+                        <li><a href="compliance_guides.html">Compliance Guides</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <!-- Donate Button -->
+                <li>
+                    <a href="book-training.html" class="donate-btn">Book Training</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- SERVICES HERO -->
+    <section class="services-hero">
+        <div class="services-hero-content" data-aos="fade-up">
+            <span>Our Services</span>
+            <h1>Financial services designed for mission-driven organisations.</h1>
+            <p>
+                We provide nonprofit accounting, bookkeeping, tax advisory, internal audit,
+                cloud accounting training, and virtual administrative support for charities,
+                NGOs, PBOs, foundations, and INGOs worldwide.
+            </p>
+        </div>
+    </section>
+    <!-- SERVICES INTRO -->
+    <section class="services-intro">
+        <div class="services-intro-container">
+            <div class="services-intro-text" data-aos="fade-down">
+                <span class="section-tag">WHAT WE DO</span>
+                <h2>Specialist financial support for organisations that serve communities.</h2>
+                <p>
+                    Nonprofit finance requires more than ordinary bookkeeping. It requires
+                    clear donor reporting, restricted fund tracking, grant compliance,
+                    audit readiness, and strong financial systems.
+                </p>
+                <p>
+                    Belevo CloudPath Advisors helps mission-driven organisations manage
+                    their finances with confidence while remaining focused on impact.
+                </p>
+            </div>
+
+            <div class="services-intro-card" data-aos="fade-up">
+                <i class="fa-solid fa-cloud"></i>
+                <h3>100% Virtual & Cloud-First</h3>
+                <p>
+                    Access expert nonprofit finance support from anywhere through secure,
+                    modern cloud accounting systems and virtual collaboration.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- SERVICES LIST -->
+    <section class="services-list-section">
+
+        <div class="services-page-header" data-aos="fade-up">
+            <span class="section-tag">CORE SERVICES</span>
+            <h2>How We Support Your Organisation</h2>
+            <p>
+                Choose the service that best fits your current needs, or book a discovery
+                call and we’ll help you identify the right starting point.
+            </p>
+        </div>
+
+        <div class="services-list-grid">
+
+            <div class="service-page-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-page-img">
+                    <img src="image/96f69f34c614a5d71d02250ff5850408.jpg" alt="Accounting and financial statements">
+                </div>
+                <div class="service-page-content">
+                    <i class="fa-solid fa-chart-column"></i>
+                    <h3>Accounting & Financial Statements</h3>
+                    <p>
+                        Accurate nonprofit financial reporting, fund accounting, monthly statements,
+                        board-ready reports, and grant expenditure tracking.
+                    </p>
+                    <a href="accounting_&_Financial_Reporting.html">Learn More</a>
+                </div>
+            </div>
+
+            <div class="service-page-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-page-img">
+                    <img src="image/18140dfece6e5daf3fb9fd0d4427b2d5.jpg" alt="Bookkeeping services">
+                </div>
+                <div class="service-page-content">
+                    <i class="fa-solid fa-book-open"></i>
+                    <h3>Bookkeeping</h3>
+                    <p>
+                        Daily transaction coding, bank reconciliations, payables, receivables,
+                        petty cash, expenses, and multi-currency bookkeeping.
+                    </p>
+                    <a href="bookkeeping.html">Learn More</a>
+                </div>
+            </div>
+
+            <div class="service-page-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-page-img">
+                    <img src="image/bd0d3b0e161b50acb74c2557bdc3e692.jpg" alt="Tax advisory">
+                </div>
+                <div class="service-page-content">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                    <h3>Tax Advisory</h3>
+                    <p>
+                        Guidance on nonprofit tax compliance, exemptions, annual returns,
+                        Gift Aid, Form 990, PBO compliance, and regulatory obligations.
+                    </p>
+                    <a href="tax_advisory.html">Learn More</a>
+                </div>
+            </div>
+
+            <div class="service-page-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-page-img">
+                    <img src="image/a076970a62394fba6dffbeb2ccb151e7.jpg" alt="Internal audit services">
+                </div>
+                <div class="service-page-content">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Internal Audit</h3>
+                    <p>
+                        Risk-based internal audit, control reviews, fraud prevention,
+                        compliance checks, and audit readiness support.
+                    </p>
+                    <a href="internal_audit.html">Learn More</a>
+                </div>
+            </div>
+
+            <div class="service-page-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-page-img">
+                    <img src="image/WhatsApp Image 2026-06-24 at 23.35.03.jpeg" alt="Cloud accounting training">
+                </div>
+                <div class="service-page-content">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <h3>Cloud Accounting Training</h3>
+                    <p>
+                        Practical training for QuickBooks, Xero, Odoo, Zoho Books,
+                        and Sage tailored to nonprofit finance teams.
+                    </p>
+                    <a href="cloud_accounting_training.html">Learn More</a>
+                </div>
+            </div>
+
+            <div class="service-page-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-page-img">
+                    <img src="image/5e8700424201eb225c9a7dea4c3ec7f4.jpg" alt="Virtual admin services">
+                </div>
+                <div class="service-page-content">
+                    <i class="fa-solid fa-laptop-house"></i>
+                    <h3>Virtual Admin Services</h3>
+                    <p>
+                        Remote administrative support for board meetings, donor correspondence,
+                        document management, calendars, and office coordination.
+                    </p>
+                    <a href="virtual_administrative_services.html">Learn More</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- SERVICES CTA -->
+    <section class="services-cta" data-aos="zoom-in">
+        <div class="services-cta-content">
+            <span>NOT SURE WHERE TO START?</span>
+            <h2>Book a free discovery call and let’s identify the right support.</h2>
+            <p>
+                Tell us about your organisation, current challenges, and financial goals.
+                We’ll help you choose the most practical next step.
+            </p>
+            <div class="cta-buttons">
+                <a href="consultation.html" class="cta-primary-btn">Book Free Consultation</a>
+                <a href="book_training.html" class="cta-secondary-btn">Book Training</a>
+            </div>
+        </div>
+    </section>
+    <!--footer-->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- Column 1 -->
+            <div class="footer-col footer-brand">
+
+                <div class="logo">
+                    <span><img src="logo/logo.jpeg" alt="Belevo CloudPath Advisors Logo"></span>
+                    <h3>Belevo CloudPath Advisors</h3>
+                </div>
+
+                <p>
+                    Your virtual nonprofit finance partner serving organisations across the US, UK, Kenya, and beyond.
+                </p>
+
+            </div>
+
+
+            <!-- Column 2 -->
+            <div class="footer-col">
+                <h4>CONTACT US</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    100% Virtual · Serving US, UK & Kenya
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    Tel: +254141 999 740
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    Email: info@belevocloudpathadvisors.com
+                </p>
+            </div>
+
+
+            <!-- Column 3 -->
+            <div class="footer-col">
+                <h4>OUR SERVICES</h4>
+
+                <ul>
+                    <li>
+                        <a href="accounting_&_Financial_Reporting.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Accounting & Financial Statements
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="bookkeeping.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Bookkeeping
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tax_advisory.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Tax Advisory
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="internal_audit.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Internal Audit
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- Column 4 -->
+            <div class="footer-col">
+                <h4>QUICK LINKS</h4>
+
+                <ul>
+                    <li>
+                        <a href="about.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="who_we_serve.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Who We Serve
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            <i class="fa-solid fa-angle-right"></i>
+                            Book a Free Consultation
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- Bottom Footer -->
+        <div class="footer-bottom">
+
+            <p>
+                © All rights reserved 2026. Crafted @
+                <a href="https://wa.me/254700073919?text=Hello%20I%20am%20interested%20in%20your%20services">
+                    Brydex Technologies
+                </a>
+            </p>
+
+            <div class="footer-links">
+                <a href="terms_&_conditions.html">Terms of Use</a>
+                <a href="privacy_policy.html">Privacy Policy</a>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com/Belevoconsultants"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/company/belevo-consultants/"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="254141999740"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 90
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const loader = document.getElementById("loader");
+            const content = document.getElementById("page-content");
+            const topFooter = document.getElementById("top-footer");
+            const menuToggle = document.querySelector('.menuToggle');
+            const header = document.querySelector('.main-header');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            // LOADER + BLUR TRANSITION
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    loader.style.opacity = "0";
+
+                    setTimeout(() => {
+                        loader.style.display = "none";
+
+                        content.style.opacity = "1";
+                        content.style.filter = "blur(0)";
+                        content.style.transition = "all 0.6s ease";
+
+                        document.body.style.overflow = "auto";
+
+                        topFooter.classList.add("show");
+                    }, 500);
+                }, 1500);
+            });
+            // MOBILE MENU
+            menuToggle.addEventListener('click', e => {
+                e.stopPropagation();
+                header.classList.toggle('active');
+            });
+
+            // DROPDOWN (mobile)
+            dropdowns.forEach(dropdown => {
+                const icon = dropdown.querySelector('.dropbtn i');
+
+                icon.addEventListener('click', e => {
+                    if (window.innerWidth > 900) return;
+
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) d.classList.remove('active');
+                    });
+
+                    dropdown.classList.toggle('active');
+                });
+            });
+
+            // SCROLL BUTTON
+            let calcScrollValue = () => {
+                let scrollProgress = document.getElementById("progress");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round((pos * 100)/calcHeight);
+
+                if (pos > 100) {
+                    scrollProgress.style.display = "grid";
+                } else {
+                    scrollProgress.style.display = "none";
+                }
+
+                scrollProgress.onclick = () => {
+                    document.documentElement.scrollTop = 0;
+                };
+
+                scrollProgress.style.background =
+                    `conic-gradient(#1456D9 ${scrollValue}%, white ${scrollValue}%)`;
+            };
+
+            window.addEventListener("scroll", calcScrollValue);
+
+            //WHATSAPP BUTTON
+           const whatsapp = document.querySelector('.whatsapp-float');
+
+            let lastScrollY = window.scrollY;
+            let idleTimer;
+            let visible = false;
+
+            /* 🔹 SCROLL BEHAVIOR */
+            window.addEventListener('scroll', function () {
+                let currentScrollY = window.scrollY;
+
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // scrolling down
+                    showWhatsApp();
+                } else {
+                    // scrolling up
+                    hideWhatsApp();
+                }
+
+                lastScrollY = currentScrollY;
+
+                resetIdleTimer();
+            });
+
+            /* 🔹 IDLE BEHAVIOR (auto trigger) */
+            function resetIdleTimer() {
+                clearTimeout(idleTimer);
+
+                idleTimer = setTimeout(() => {
+                    showWhatsApp();
+
+                    setTimeout(() => {
+                        hideWhatsApp();
+                    }, 4000);
+
+                }, 5000); // shows after 5s of no activity
+            }
+
+            /* 🔹 SHOW / HIDE FUNCTIONS */
+            function showWhatsApp() {
+                if (!visible) {
+                    whatsapp.classList.add('show');
+                    visible = true;
+                }
+            }
+
+            function hideWhatsApp() {
+                whatsapp.classList.remove('show');
+                visible = false;
+            }
+
+            /* 🔹 INITIAL TRIGGER */
+            resetIdleTimer();
+
+            // HEADER SCROLL EFFECT
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 80) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo/logo.jpeg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+
+    <title>Book training - Belevo CloudPath Advisors</title>
+</head>
+<style>
+/* HERO */
+.training-booking-hero{
+    padding:120px 5% 90px;
+    background:
+        linear-gradient(
+            90deg,
+            #1456D9 0%,
+            #1456d9ba 42%,
+            #1456d971 72%,
+            rgba(255, 255, 255, 0.08) 100%
+        ),
+    url("image/1baa07042c398f6d200917fab158833b.jpg") center/cover;
+}
+.training-booking-content{
+    max-width:850px;
+    color:#fff;
+}
+.training-booking-content span{
+    display:inline-block;
+    padding:9px 18px;
+    border-radius:40px;
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.22);
+    margin-bottom:20px;
+    font-weight:600;
+    font-size: 14px;
+    color: #fff;
+}
+.training-booking-content h1{
+    font-size:clamp(38px,5vw,50px);
+    line-height:1.1;
+    margin:20px 0;
+}
+.training-booking-content p{
+    color:#E2E8F0;
+    line-height:1.8;
+}
+/* FORM */
+.training-form-section{
+    padding:100px 5%;
+    background:#F8FAFC;
+}
+.training-form-container{
+    max-width:900px;
+    margin:auto;
+}
+.training-form-card{
+    background:#fff;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 20px 60px rgba(15,23,42,.08);
+}
+.training-form-card h2{
+    text-align:center;
+    color:#061A4A;
+    margin-bottom:35px;
+    font-size:34px;
+}
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+.training-form-card input,
+.training-form-card select,
+.training-form-card textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #CBD5E1;
+    border-radius:8px;
+    outline:none;
+    font-family:inherit;
+}
+.training-form-card textarea{
+    min-height:140px;
+    resize:none;
+}
+.training-form-card button{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:8px;
+    background:#0A2F87;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s ease;
+}
+.training-form-card button:hover{
+    background:#061A4A;
+}
+/* MOBILE */
+@media(max-width:768px){
+
+    .training-booking-hero{
+        padding:90px 6% 70px;
+    }
+
+    .training-form-section{
+        padding:75px 6%;
+    }
+
+    .training-form-card{
+        padding:30px 20px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .training-form-card h2{
+        font-size:28px;
+    }
+}
+</style>
+<body>
+    <!--WHATSAPP-->
+    <a href="https://wa.me/254141999740?text=Hello%20Belevo%20CloudPath%20Advisors!%20I%20would%20like%20to%20learn%20more%20about%20your%20nonprofit%20accounting,%20bookkeeping,%20tax%20advisory,%20and%20cloud%20accounting%20services."
+        class="whatsapp-float"
+        target="_blank">
+
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-text">Book A Free Discovery Call</span>
+
+    </a>
+    <!--SCROLL BUTTON-->
+    <div id="progress">
+        <span id="progress-value">&#8593</span>
+    </div>
+    <!--top-footer-->
+    <section class="top-footer">
+
+        <div class="top-footer-content">
+
+            <div class="top-contact">
+                <span>
+                    <i class="fa fa-phone"></i>
+                    +254141 999740
+                </span>
+
+            </div>
+
+            <div class="top-actions">
+                <a href="consultation.html" class="partner-btn">
+                    Book a Free Consultation
+                </a>
+                <div class="social-link-list">
+                    <a href="https://www.facebook.com/Belevoconsultants" class="social-link">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/belevo-consultants/" class="social-link">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a href="254141999740" class="social-link">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--HEADER-->
+    <header class="main-header">
+
+        <div class="logo-wrapper">
+            <img src="logo/logo-removebg-preview.png" class="logo">
+        </div>
+
+
+        <div class="menuToggle"></div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="services.html" class="dropbtn">
+                        <span>Services</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="accounting_&_Financial_Reporting.html">Accounting & Financial Reporting</a></li>
+                        <li><a href="bookkeeping.html">Bookkeeping</a></li>
+                        <li><a href="tax_advisory.html">Tax Advisory</a></li>
+                        <li><a href="internal_audit.html">Internal Audit</a></li>
+                        <li><a href="cloud_accounting_training.html">Cloud Accounting Training</a></li>
+                        <li><a href="virtual_administrative_services.html">Virtual Administrative Services</a></li>
+                    </ul>
+                </li>
+                <li><a href="who_we_serve.html">Who We Serve</a></li>
+                <li class="dropdown">
+                    <a href="resources.html" class="dropbtn">
+                        <span>Resources</span>
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="training.html">Training</a></li>
+                        <li><a href="NPO_challenges_we_solve.html">NPO Challenges We Solve</a></li>
+                        <li><a href="blog_&_resources.html">Blog & Resources</a></li>
+                        <li><a href="compliance_guides.html">Compliance Guides</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <!-- Donate Button -->
+                <li>
+                    <a href="book-training.html" class="donate-btn">Book Training</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- TRAINING BOOKING HERO -->
+    <section class="training-booking-hero">
+
+        <div class="training-booking-content">
+
+            <span class="section-tag">
+                Cloud Accounting Training
+            </span>
+
+            <h1>
+                Book a Training Session for Your Team
+            </h1>
+
+            <p>
+                Tell us about your organisation, preferred accounting platform,
+                and training goals. We'll review your request and recommend the
+                most suitable training approach.
+            </p>
+
+        </div>
+
+    </section>
+    <!-- TRAINING FORM -->
+    <section class="training-form-section">
+
+        <div class="training-form-container">
+
+            <div class="training-form-card">
+
+                <h2>Training Request Form</h2>
+
+                <form id="training-form">
+
+                    <div class="form-row">
+                        <input type="text" name="organization_name"
+                            placeholder="Organization Name" required>
+
+                        <input type="text" name="contact_person"
+                            placeholder="Contact Person" required>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="email" name="user_email"
+                            placeholder="Email Address" required>
+
+                        <input type="tel" name="phone"
+                            placeholder="Phone / WhatsApp Number" required>
+                    </div>
+
+                    <div class="form-row">
+
+                        <select name="organization_type" required>
+                            <option value="">Organization Type</option>
+                            <option>Nonprofit</option>
+                            <option>Charity</option>
+                            <option>NGO</option>
+                            <option>PBO</option>
+                            <option>Foundation</option>
+                            <option>Faith-Based Organization</option>
+                            <option>International NGO</option>
+                            <option>Other</option>
+                        </select>
+
+                        <select name="training_platform" required>
+                            <option value="">Training Platform</option>
+                            <option>QuickBooks Online</option>
+                            <option>Xero</option>
+                            <option>Zoho Books</option>
+                            <option>Odoo</option>
+                            <option>Sage</option>
+                            <option>Custom Training</option>
+                        </select>
+
+                    </div>
+
+                    <div class="form-row">
+
+                        <select name="training_format" required>
+                            <option value="">Training Format</option>
+                            <option>One-on-One Training</option>
+                            <option>Small Team Training</option>
+                            <option>Department Training</option>
+                            <option>Organization-Wide Training</option>
+                        </select>
+
+                        <input type="number"
+                            name="participants"
+                            placeholder="Number of Participants">
+                    </div>
+
+                    <div class="form-row">
+
+                        <input type="date" name="preferred_date">
+
+                        <select name="experience_level">
+                            <option value="">Current Skill Level</option>
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+                        </select>
+
+                    </div>
+
+                    <textarea
+                        name="training_needs"
+                        placeholder="Describe your training needs, challenges, or specific topics you would like covered."></textarea>
+
+                    <button type="submit">
+                        Submit Training Request
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 900,
+            easing: "ease-out-cubic",
+            once: true,
+            offset: 90
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const loader = document.getElementById("loader");
+            const content = document.getElementById("page-content");
+            const topFooter = document.getElementById("top-footer");
+            const menuToggle = document.querySelector('.menuToggle');
+            const header = document.querySelector('.main-header');
+            const dropdowns = document.querySelectorAll('.dropdown');
+
+            // LOADER + BLUR TRANSITION
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    loader.style.opacity = "0";
+
+                    setTimeout(() => {
+                        loader.style.display = "none";
+
+                        content.style.opacity = "1";
+                        content.style.filter = "blur(0)";
+                        content.style.transition = "all 0.6s ease";
+
+                        document.body.style.overflow = "auto";
+
+                        topFooter.classList.add("show");
+                    }, 500);
+                }, 1500);
+            });
+            // MOBILE MENU
+            menuToggle.addEventListener('click', e => {
+                e.stopPropagation();
+                header.classList.toggle('active');
+            });
+
+            // DROPDOWN (mobile)
+            dropdowns.forEach(dropdown => {
+                const icon = dropdown.querySelector('.dropbtn i');
+
+                icon.addEventListener('click', e => {
+                    if (window.innerWidth > 900) return;
+
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    dropdowns.forEach(d => {
+                        if (d !== dropdown) d.classList.remove('active');
+                    });
+
+                    dropdown.classList.toggle('active');
+                });
+            });
+
+            // SCROLL BUTTON
+            let calcScrollValue = () => {
+                let scrollProgress = document.getElementById("progress");
+                let pos = document.documentElement.scrollTop;
+                let calcHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                let scrollValue = Math.round((pos * 100)/calcHeight);
+
+                if (pos > 100) {
+                    scrollProgress.style.display = "grid";
+                } else {
+                    scrollProgress.style.display = "none";
+                }
+
+                scrollProgress.onclick = () => {
+                    document.documentElement.scrollTop = 0;
+                };
+
+                scrollProgress.style.background =
+                    `conic-gradient(#1456D9 ${scrollValue}%, white ${scrollValue}%)`;
+            };
+
+            window.addEventListener("scroll", calcScrollValue);
+
+            //WHATSAPP BUTTON
+           const whatsapp = document.querySelector('.whatsapp-float');
+
+            let lastScrollY = window.scrollY;
+            let idleTimer;
+            let visible = false;
+
+            /* 🔹 SCROLL BEHAVIOR */
+            window.addEventListener('scroll', function () {
+                let currentScrollY = window.scrollY;
+
+                if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // scrolling down
+                    showWhatsApp();
+                } else {
+                    // scrolling up
+                    hideWhatsApp();
+                }
+
+                lastScrollY = currentScrollY;
+
+                resetIdleTimer();
+            });
+
+            /* 🔹 IDLE BEHAVIOR (auto trigger) */
+            function resetIdleTimer() {
+                clearTimeout(idleTimer);
+
+                idleTimer = setTimeout(() => {
+                    showWhatsApp();
+
+                    setTimeout(() => {
+                        hideWhatsApp();
+                    }, 4000);
+
+                }, 5000); // shows after 5s of no activity
+            }
+
+            /* 🔹 SHOW / HIDE FUNCTIONS */
+            function showWhatsApp() {
+                if (!visible) {
+                    whatsapp.classList.add('show');
+                    visible = true;
+                }
+            }
+
+            function hideWhatsApp() {
+                whatsapp.classList.remove('show');
+                visible = false;
+            }
+
+            /* 🔹 INITIAL TRIGGER */
+            resetIdleTimer();
+
+            // HEADER SCROLL EFFECT
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 80) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
